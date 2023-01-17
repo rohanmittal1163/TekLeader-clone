@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TekLeaders</title>
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="'text/ico" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUQERIQFhUQEBUVFRUQEB0VFxUVGRcXFhcXFRcYICkgGB8mGxYVITEhJikrLi4uGh8zODMtNygtLisBCgoKDg0OGhAQGy8mHyUwLS0tLS0tMC0tLS0tLi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAGMB+wMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwEEBQYIAwL/xABKEAABAwIBBQoICwgCAwEAAAABAAIDBBEFBhIhMVQHExZBUWFxkZPRFyIycnOBlKEUMzRCU5KxsrPS0xUjNVJidILBwsMkovDh/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAYFAf/EAD0RAAICAAIGBggEBgEFAAAAAAABAgMEERITITFRoQUUQVKB0RUyYXGRkrHBBiIz4SNCU8Lw8RY1cnOCov/aAAwDAQACEQMRAD8AnFEWsZZZQikjAZYyyXzQdTQNbz0fb618lJRWbLKqp2zUILNsyWLY5BTi8sgaTqaNLj0N1+vUtZm3R4QfEhlcOVzg09Quo7qal8jjJI4uJNy5xuT/APci8ViliJPdsOoo6DojH+I3J/BefMkfwlR7O/tR3J4So9nf2o7lHCKOvs4mj0PhO7zfmSP4So9nf2o7k8JUezv7UdyjhE19nEeh8J3eb8yR/CVHs7+1HcnhKj2d/ajuUcImvs4j0PhO7zfmSP4So9nf2o7k8JUezv7UdyjhE19nEeh8J3eb8yR/CVHs7+1HcnhKj2d/ajuUcImvs4j0PhO7zfmSP4So9nf2o7k8JUezv7UdyjhE19nEeh8J3eb8yR/CVHs7+1HcnhKj2d/ajuUcImvs4j0PhO7zfmSP4So9nf2o7k8JUezv7UdyjhE19nEeh8J3eb8ySWbo8V/GgkA5Wva49Rt9q2XCMoIKkfupAXW0scM14/xOvpFwoRXpDKWkOaS1wNwWmxB5QRqUo4mSe3aUX9B4eUf4ecX8V4r7rcdAotRyIyl+EtMUpG/RgXOrPbqzrcvEfUeOw25bIyUlmjl7qZ02Oua2oIiKRUEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREBQ6lCuV9cZquV3E1xjb5rDm+/SfWpqKgGqN3OJ43O/wBrLinsSPf6AgnZOXakl8f9Hiqqi+4tY6R9qxnTsuP2bN9FN2Tu5P2dN9DN2Tu5TyEWzqi4nM/8gn/TXxZA37Om+hm7J3cn7Om+hm7N3cp4CqnVVxH/ACCf9NfFkDfs6b6GbsndyHDpte8zdk7uU8q0xT4mX0L/ALpXx4X28gvxBPP1F8WQOqIOPpRZDp2smEREPgXpHGXHNaC4nUGi5PHoAXmth3P/AJfD0SfhPUorNpFd9mrrlPLPJN/AxP7Nm+hm7J3crYroKygKr8t/nu+0qy2rV5bTz+jukZYtyTjlll28czwREVJ6gREQGRwGvNPURyj5jhnc7dTh1E+5TkFz4e5T/S+Q3zB9gWvCvY0c1+IIJSrn2vNfDJ/dnsrOvxOCAAzTQxBxIaZZGsuRrtnEXV4ou3dPiqX0sn3QtsI6Ukjm5y0Ytm9cKKHbaP2qP8yyjXggEEEEXBGkEcy5SfqPQV1PhvxUfomfdCsuq1eW0hVbp57C5REVJcEREAREQBERAEREAREQBERAEREAVrW1kcTTJLJHGwWBdI8MaLmwuXaNaulpe65/DJfSQ/itUoLOSXEjJ5RbM7wnodso/aY/zLJxyBwDmkEOAILTcEHSCCNYXKjl09k/8lp/7aL7jVZbVq0tu8rqt029hkURFSXBERAEREAREQBERAEREAREQBERAUK5/n8p3T/yXQBXP8/lO6f+SyYrs8Tofw/61nuX3PNfS+UWQ6UyH7bqtqqvaX/mT9uVW01PtMn5lj1VG2V6mvur4LyJoyOlc6jhe8uc4tN3PcXOPjOGknSVaZfzvjo3Oje5js9gzo3lp16dLdKusiPkUHmu++5WW6R8id6Rn2r0X+l4HG1RXX1HLZp7uz1uG4jX9u1W01PtL/zL4djNSRY1FSQdYM7yD0jOVii8/adlqau6vgvIL1ggc85rGuc7+VrC49Q0rI5O4G+rl3thzWtF3uIvmt5uUniHTyKXsJwqKnYGRNzRbTyuPK48ZVtVLnt3I8/pDpSGFeglnLhw9/b4fEiSPJWtcARTy2PL4p6nWIX3wSrdnf1t71KVTlHSRktfURXbrAdnEcxDb6eZW3DOh2hv1H/lVrpqX830PPj0tjprONSa9kZeZGFXk3VRMMkkLmsYLucXDQPUrzID5fD0SfhOW3ZT5U0klLNFHMHPeyzRmPFzccZbZajkD/EIeiT8JyrcYxsWi8zbDEX3YS53Q0Wk+xr+X2tkxKAqvy3+e77Sp9UBVflv8932lWYrs8TD+H/Ws8PueKy8GTNXI0PZBIWuFwbgXHLY6VmciMlt/IqJm/umnxWkfGEcv9IPWdHKpKqqhkMbnvIaxjbknUAFCrD6Szkacf0u6bNXSk2t+eb28Fk9/EhmsycqomGSWEhjdbi4WGm3FzlYpbBlVlK+rfZt2xMPit5f6n8/2dZOvqmWjn+U9XDSulWnekpcFns+Leb/ANA9yn+l8hvmD7AoAPcp/pfIb5g+wLThe3w+54n4h3Vf+39p7KLt3P4ql9LJ91qlFRdu5/FUvpZPutXoUfqI5a71GRA/UegrqfDfio/RM+6Fyw/UegrqfDfio/RM+6Ffi90fH7FOG3vw+5coiLGawqE2VHuAFzxKCcvsu5Kx7oIHFlM0kaNBn0+U7kbo0N5NJ06BZXW5vJELLFBZslbEMtcPguJKqK4NiIyZXA87YwSrLwmYVtLvZZv01AlLSvkcI4mPe46mxtLnHoA0rMxZGYi7SKOo0fzNzfc4haOrwW9/Qza+b3L6kxeEvC9pPs036az2CY1BVx79TvL2ZxbnFjmaRrFngH3KAuA+JbHN1t/Mpe3L8Nmp6Lep43Rv36Q5rrXsbWOhVW1wjHOLzLK7JyeTRc4nl3h9PK+nmnLZIiA5u8SusS0OGlrCDocNRVv4S8L2k+zTfpqP8vMlK6bEKiaGmlfG9zC1zc2xtFG02ueUEepYDgPiWxzdbfzKcaa3FNy5ojK2xNpLkyX/AAl4XtJ9mm/TXrT7oeGPNhVNHpIpIx1vaAoYlyMxFuk0dR/i0O9zSVh6ulkidmSxyRuHzZGFhty2cNXOp9Xre5/Qi75revqdQ0lUyVokiex7HanMcHNPQRoKuFzfkjlRLQTB7S4xOcN+i4nt1EgcTgNII5ADoXRcMoc0OBBDgCCOMEXBWe2rVsvrs00eqw+J5S0dMc2ephY7+VzxndJaNI6lpW6hlu6AmipXWlI/eyDXG0jQxnI8gg34hbjNxD5OsnWTck6yeMk8anVh3JZshZfovJE/eEzCtpd7LN+mtY3Q8taCroZIKeYvkc+MhpgkZoa9rjpewDUDxqNIcHqXtDmU1S5rhcOZTvc0jmIbYr5qcKqI258lPUMaLXdJA9jRfQLucAFdGiCaef0KZXTaaa+pZuXT2T/yWn/tovuNXMLl09k/8lp/7aL7jVHF7o+JPDb34GRWHxLKWjpzmz1MLHAXLHPGfbzB43uWibp2Xb4nOoaVxa8Ab9K3W24vvbOR1iCXcV7DTpETaXHjLnHpLnE9ZJKhVh3JZsnZfovJE++EvCtpd7LN+mnhLwvaT7NN+moap8kcQf5NHU6r+NEWaP8AO3UvbgPiWxzdbfzKeoq73NENfZw5MnPAMqaStc9tLKXmMAuvE9lgbgeW0X1HUs0TZRjuR4DVUstQamB8YfHGGl9tJDnE2sTyhee7RjkjGxUUbi0TNc+W2guYDmtZfkJziR/SOIm9DrTs0YsuVjUNKSNrrsvsNhOa+qYTex3prpQDzmJrgvDwl4XtJ9mm/TUAgLYafITE3tD20clnC4znxsPra94cPWFoeHrW9/QoWIm9yJd8JeFbS72Wb9NZ3BMZgq49+p3l7M4tzixzPGGsWeAePkUE+D3FNjd20P6ik3IeCTDsMldVxlhgdNK5mc1xLQ0OFi0kXNra1TbXXGOcXm/eW12Tk/zLYbZimKwUzc+oljjadAMjw255G30uPMFr790nCwSPhR0G2immI9RDLHpCg3GcVlqpXTzuLnOOgX0MHE1g4gP/AN1r6w3BKmo0wU80gBsXMYS0HkLtQ61asNFL8zK3iJN/lROHhLwvaXezTfpp4S8L2k+zTfpqIOA+JbHN1t/MnAfEtjm62/mXzU1d7mhrrOHJk54BlRSVpeKWUvMQaX3ieywdfN8tov5J1cizajPchwKppX1JqYXx742HNz7eNmmS9rE6s4dakxZ7IqMmkaK23HNlCuf5/Kd0/wDJdAFc/wA/lO6f+Sw4rs8Tpfw/61nuX3PNERZDpAqqiqvjPpM+RHyKDzXffcrLdI+RO9Iz7Ve5EfIoPNd99yst0j5E70jPtXoy/S8Diqv+oL/yf3ESIiLzztCUtzOjDaZ0vHNKTf8ApboA6y/rWaynExppGwBxkcA1uYbHSQHEG4tZt1j9zpw+BMHI+S/N4xP2ELP19ZHEwySuDWttdztQubD32XpVr+Gl7Dh8ZN9dm8s2pvZxyexe3cRAck67Z5frN71TgjW7PJ9Yd6k/hVRbRF1nuThXRbRF1nuVGpq73NHp+lsd/T/+ZeZFdVk5VxMMkkL2sYLucXDQPUVeZAfxCHok/CctzyoyipZKSaNk8bnPjs1oJuTccy0zID+IQ9En4TlW4RjYtFm2vE3X4O6Vscmk+xr+X2kxKJcmcmjVTPe8ERMkdnEGxc6/kN/2f9nRLRWt5I4xFNGYmtYx8JLXMZqtc+O3jsTfnve/KdU4RlJJngYXEW0VWOtb8k3w3/6T7PgZqR8cMZcS1jI2cehrWge4AKJ8rcpn1b8xl2xMPit1Fx/mfz8g4lImV2DuqqcxteWua7OAvZriPmv5ufiNioengcxxY9pDmkhzTrBHEqcTKWxdh6XQdFMm7G85rs4e3258duXwPJERZDpQe5T7RG7GEaixtuoKA+9Tjk9Nn0sDuMwR3ty5oB991qwr2tHPfiBflrlwb55eRk1F27p8VS+lk+61Sioz3cIv/Gp321VJbfkzo3m3/r7l6NP6iOWu9RkNv1HoK6nw34qP0TPuhcsuGi3MuncnqkS0sEotaSnjdo52BX4vdHx+xRht78DJIiLGazWN0atMOHVD2kgujEYI1jfHNjvfi0OK53U/brAJwuew+dCfVv0agNbsKvyP3mLE+sSdubZS4ZRU376XNqJXuMn7iR5zQSGNzmsItmi9gTpcVt/hLwraXeyzfpqE6LJ6rmYJYaaeRjr2cyMuabEg2I5wQrjgliGxVXYlJ01yk25c0I22JJJcmTJ4S8K2l3ss36az2C4zBVx79Tvz2ZxbnFjmaRrFngHj5Fz7wSxDYqrsSpf3LqSSnoM2ojfE5s0riJG5pDdBvY8WtUW1QjHOL5ltdk5SykjbKysihYZJZGRsbrc9wa0dJOha5UbouFsNjVA+ZDI8cmtrCFCmVOUElfO6eQnNuREw6o4+IAcpFiTxn1K1wvCaipdmU8MkhGvMbcDznah6yrI4VZZzZB4ht5RROPhLwraT7NN+mtS3ScqMNraXNhlL545Guj/cSMsCQJBnOYBbNubX1gci1DgLiWxy9bPzK1xLJatp4zNPTSMY0gFzi2wJIA1HlICnCqtSTjLb70RlZY001yMOuksjXE4fSOJuTRw3J9G1c2ro3JRhOGUzRrNDEB0mIBRxfqo+4b1mc9YlXGeaSode80jpNOsZxJA9QIHqW6bkmTsdVPJNM0OZTBuaxwuHSOvYkcYaGk2PGRyLQo9Q6Aph3DXjeKlvGJ2k9BYAPeHK2/OMHl7iulaU1mSaFpm65/DJfSQ/itW6LS91z+GS+kh/FasNX6kfevqbbPUfuIEcum8CeBRwOOoUsRPQIwVzI5dMYXGTQxNGs0bAOkxALTi90fH7GfDb2c3VlW6aR8z750r3PNzfS4l3+1te5nidDSzyVFa/Nc1jRAd6fJYuzt8cMxpsQA0X5HHnWmxnQOgK9w3Cqiozvg8MsuZbO3phdm3va9tV7HqK0zinFp7EZ4Np5reTl4TMK2l3ss36aeEvCtpd7LN+mob4JYhsVV2JTgliGxVXYlZur097mvI0a63hyZPGA5U0la57aWUvMYBdeJ7LA3A8tovqOpRlu3fK4P7X/scstuPYNU08tSZ4JYg+OMNMjC25DnXtfpCxO7d8rg/tf+xyjXFRuyju/Y+zk5VZvf8Aua1ufQNfiVK14BG/F1jytY57T6nNB9S6NC533N/4nS+kf+FIuiV8xXrL3EsN6r94WuboTCcNqg3igcT5os53/qCtjXlPC17SxwBa9pa4HUQRYgrOnk8y9rNZHKylTIPdAo6akjpqgPY6HOF2RFzXgvc4HxdIPjabjWsTj+5bWRvJpQ2aMk5ozwyRovoa4PIabC2kHTY6AsIchMT2OX6zPzL0JOuxbWYIqyt5pciVfClhn0kvs7+5XNHujYZIc34SGk/SxvjA6XObmjrUPnIbEtjm62/mWErKOSF5jljfG8Wu2Rpa7TqNiq1h63uZZr7FvX1Oo4pGuAc0ggi4LTcEcoI1r1UIbkWUMkVU2icXGKozs1t9EcgaX5zeQENII5SDyqb1lsr0JZGmuamsyhXP8/lO6f8Aa6AKgjGaYxTyxkWzZXj1Z5zfdZYcVuR0n4ff57F7F/nMskRFkOlCqqKqH0mfIj5FB5rvvuVlukfInekZ9qtslMoaSOkhjfMxr2tN2m9x4zjyc6tcuMdppqR0cUrHuL2nNF72BueJb3JarLPsOOqqs6+paLy0+D73uI3REWA7A33cwxUNL6Vx8s75Hc6yBZ4HqAPqK3bHcPFRBJATbfG6Drs4EFp59IGhQfFIWkOaSCCCC02II1EFSBgm6C3NDaprrj58bbg87m6wei/QFqpujo6Mjnek+jrdd1ijbubS3prtXHjsNcnyOrWkjec63zmvBB6LkH3K24NVuzT/AFVJ8WV9E4X39o85rmnqIXpwrotpj9/cvupr7JfQiulsctjq2/8AbLzIoqcCqo2mSSCRrWi5c5tgBzq/yA+Xw9En4TluWVGUdLJSTRxzsc58dmtF7k3HMtGyNq2Q1kcsrg1jd8u46hdjgPeQq3CMJrJm6rEXYjCWuyOTyaSyfd9pNKguCvkgnMsRsWyHoIubtI478ilrhXRbRH7+5Q1Um7nEai5xHWp4iS2NMxdCUyWsjZHY0t637yacAxiOqiErNepzTrY7jB+0cossTlnkw2paZIwBM0dGe0fNPPyH1dEe5O42+klD23LTYSNv5Te8cR7ypQjytoiAd/YLi9jcEcxFtBVkbI2RykZMRg78DiFZRm12bM/B/wCbV7UQ25pBIIIIJBB1gjQQV8rdcthRT/8AkQTRb6PLaLjfByjRbOHv9QWlrHOOi8jpsLiFfWpZNPtTW79gpS3NK/Ppt6J0wvI16c0+MD1lw9SixZvJPGvgtQ15vmP8R4H8pPlW5QdPXyqVU9CSbKOk8M8Rh3GO9bV715rPxJqWs7oOCuq6GWJgvI20kY5XsN7DnLc5vrWwxSBwDgQQRcEHQRxEL0IXpptPNHDtJrJnKS3fIndBfRM+DysMsIJLc0gPjubkC+hzbkmxItc6baFuOWu5qype6opXNildcvY4fu5HfzXGljjxkAg8l7lRzV5C4jGbGkldpsDFaQHnGaSR67LfrK7I5PmYdCyt5ok+n3VsPd5QqWaL+NFfTyeIT3aFceFHDfpJewd3KIeCGIbHU9kVXghiGx1PZFQ1FXHmiett4ciamV9Ni9HURwOcWuDoi57C3NeWhzSAddiWn1Ln2qp3xvdFI0tfG4tc08TgbEKa9yHDJ6emmZPFJG51TnASNzSW72wXF+cFXOXOQcdd++jcIpwLZ1rtkA1CQDTfkcNI59AUK7I1zcewnOEpxT7TTtzfLuGkiNLVZzWB5dHI1pdbON3Ne1ovruQRfWRosFvsW6Dhjhf4UwedG9p6i26iGvyAxKIkGmc8D50Dg8HoHldbQrTghiGx1PZFTlVVN6WfNEI2WRWWXJk2cPsM2uP6rvyq5qK2KtopzSyZ7ZIZo2uj0HPLCPFzhruQoL4IYhsdT2RUv7ldBLBQ73NG+N+/yHNkbmmxtY2VNtUILOLLa7JyeTWRAbToHQpL3KcqqWkhlgqX72XTb61zmktcCxjM27QbEFt9P82jjX3lruZzb66ooWtex7i50OdmuYTr3suNnNvc2uLahfi005H4hsdT2RK1SlXbHJszRjOuW4nMZa4dttN65QtV3TMpKOfD5IoamCR7nxENZICSBI0mw5gCVG/BDENjqeyKpwQxDY6nsiqo0wi09L6FkrZtNaP1MIuksiP4fR/2cH4bVA/BDENjqeyKnzJGB0dDSxvaWuZSwtc1wsWuDACCOW6+YqSaWTPuHTUnmQZl/gZpK2VlvElcZYjbQWvJJaPNdcdFuVfGReVD8PmMjW57JGhsjL2JAuWlp4nAk6+UjjuJzynycgrot6mGkG7Ht8uN3K0/aNRUO43ub18DjvbPhDOJ8Ng61uONxuDr0DO6VOu2M46MyNlcoS0okjU26jhrhd8ksZt5L4HuPReMOHvWB3Q8taGroZIKeYvkc+IhphkZoa9rjpc0DUDxrQeCGIbHU9kU4IYhsdT2RRU1JpqXNCVljWWXIwbl09k/8lp/7aL7jVz47JDENjqeyK6FwKMtpoGuBBbBGCCLEEMAIPrUMVJNLL2k8Mmm8/Yc/Zb4K6jrJYiDmPcZIjbXG8kgeo3b/jzq93Pcqm4fM8yNc6KdrWvzLZzS0ktcAdds51xz81jMeVuS0OIRCOW7XMJMcjR4zCbX16wbC449GogERHi+5niEJO9xtnZxOhcAbc7HkEHmF+lThbCcNGRCdcoS0oknwbouGO1VIFv54ZG9Wc3Svbh7hm1xfVd+VQlwQxDY6nsivrghiGx1PZFR6vV3uaJa6zhyZPeDZRUtWXNppmyFgBdmgiwNwL3A5Cot3bvlcH9r/wBjll9x/B6mnlqDPBLGHxxhpkYW3Ic69r9IXhuuYJU1FVE6CCaRrafNJjYXAHPcbGyhWowtyT2fsSm5Tqza2/uafub/AMTpfSP/AApF0SoKyEybrYsQppZaWdjGPcXOdGQADG8aT0kKdV8xLTksuB9w6ai8wrerqmxMfLIQ1kbHPe46mtaCXE25ACrhYfKuFz6KqjY0udJSTta1ouXOMbgAByk6FnL3uLDh7hu1s+q78qcPsN2uP6rvyqEuCGIbHU9kVXghiGx1PZFbNRX3uaMuun3eTJqk3QcMAJ+FsNhqax5PqAbpUU7peUsNdURupw7MhjLd8c3NLyTfQDpDRxXsbl2jlxfBDENjqeyK+o8jcRcQ0UdRc/zMzR63OsB6ypwrrg80+aIzssksmuTLvcygc/E6fNHkF73czRG8X6yB6wuhlpG51kX8AY6WYtdPKADm6WxsvfMaTrubEnVcDkud3Wa+anPYaKYOMdpQqOt0fACf/MjbcWAmDRqA1SH1aDyWHOpGXy4X0HjWacFOOTNuFxMsParI/DiuBz6qKRsfyADiZKVzWX072/yP8XDS3osR0BanUZK1rDY08h52jPB+qT71glVOPYdhR0lhrlmppPg3k+ezmYVFleDdZs8/ZOTg3WbPP2TlDRlwNPWKe/H5l5mKRZXg3WbPP2Tk4N1mzz9k5NGXAdZp78fmXmYpFleDdZs8/ZOTg3WbPP2Tk0ZcB1invx+ZeZikWV4N1mzz9k5ODdZs8/ZOTRlwHWKe/H5l5mKVbrKcG6zZ5+ycnBus2efsnJoy4DrNPfj8y8zFIsrwbrNnn7JycG6zZ5+ycmjLgOsU9+PzLzMXdUWV4N1mzz9k5ODdZs8/ZOTRlwHWKe/H5l5mKRZXg3WbPP2Tk4N1mzz9k5NGXAdYp78fmXmYu6osrwbrNnn7JycG6zZ5+ycmjLgOsU9+PzLzMUiyvBus2efsnJwbrNnn7JyaMuA6xT34/MvM2DInKwQ2pqg/u/mPPzP6Xf08/F0apNY8EXGoqEuDdZs8/ZOWw5OVGJUtmfB55IgfIdG7xfMd83o1dd1qptlFaMkzwOkcBTZJ20zjm960o7fatux+zd7iT0Vlh9Xvrc7MlYeNszC1w/0ekEq9Ws55pp5MIiIfAioqoAiIgCIiAIiIAioUQFUVCgCAqiKlkBVERAEREAREQBERAERUQFURUQFURUQFUVFVAEREAREQBERAFRURAfSIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiICiqiIAiIgKKqIgKIURAFVEQFFVEQBUREBVERAEREAVERAVREQBERAEREBRVREAVERAVREQBUREBVUREBVERAf/2Q=="/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+		/>
+		<link
+		rel="stylesheet"
+	href="css/style.css"
+	/>
+
+	</head>
+	
+		<div
+			class="h-screen bg-fixed flex flex-col items-end gap-10 bg-no-repeat bg-cover bg-[url('https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')]"
+		>
+			<div
+				class="text-white flex w-full md:w-11/12 mx-auto h-[200px] p-8 items-center justify-between"
+			>
+				<div class="items-center justify-center">
+					<img
+						src="https://tekleaders.com/wp-content/uploads/2021/08/logo-white.png"
+					/>
+				</div>
+
+				<div>
+					<i class="fa fa-solid  z-20 text-4xl cursor-pointer lg:hidden ham fa-bars"></i>
+				</div>
+
+				<div class="bg-white left-2 lg:hidden z-10 overflow-y-auto h-[90vh] text-slate-800 shadow-2xl md:w-7/12 w-9/12 rounded-lg absolute top-2 px-6 py-2 menu">
+						<div class="flex items-center justify-between border-b-2 border-solid border-slate-400 p-5">
+							<p class="font-bold">Home</p>
+						</div>
+
+						<div class="flex gap-3 flex-col">
+						<div class="flex items-center justify-between border-b-2 border-solid border-slate-400 p-5">
+							<p class="font-bold">About us</p>
+							<i class="fa fa-solid fa-plus cursor-pointer plus "></i>
+						</div>
+						<div class="self-stretch flex flex-col gap-2 w-10/12 mx-auto opt">
+					<div class="p-3 w-full border-b-2 border-solid border-slate-400 ">About us</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400" >Awards</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400">News</div>
+					</div>
+
+					</div>
+							<div class="flex gap-3 flex-col">
+						<div class="flex items-center justify-between border-b-2 border-solid border-slate-400 p-5">
+							<p class="font-bold">Solutions</p>
+							<i class="fa fa-solid fa-plus cursor-pointer plus "></i>
+						</div>
+
+						<div class="self-stretch flex flex-col gap-2 w-10/12 mx-auto opt">
+						<div class="p-3 w-full border-b-2 border-solid border-slate-400 ">Data Management</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400" >Application Managemnt</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400">Development</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400">Business Strategy</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400">IT Consulting</div>
+					</div>
+					</div>
+
+					<div class="flex gap-3 flex-col">
+						<div class="flex items-center justify-between border-b-2 border-solid border-slate-400 p-5">
+							<p class="font-bold">Resources</p>
+							<i class="fa fa-solid fa-plus cursor-pointer plus "></i>
+						</div>
+
+						<div class="self-stretch flex flex-col gap-2 w-10/12 mx-auto opt">
+						<div class="p-3 w-full border-b-2 border-solid border-slate-400 ">Blogs</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400" >Case Study</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400">Viz Gallery</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400">Training</div>
+					</div>
+					</div>
+					<div class="flex gap-3 flex-col">
+						<div class="flex items-center justify-between border-b-2 border-solid border-slate-400 p-5">
+							<p class="font-bold">Solutions</p>
+							<i class="fa fa-solid fa-plus cursor-pointer plus "></i>
+						</div>
+
+						<div class="self-stretch flex flex-col gap-2 w-10/12 mx-auto opt">
+						<div class="p-3 w-full border-b-2 border-solid border-slate-400 ">Careers</div>
+						<div class="p-3 border-b-2 border-solid border-slate-400" >LCA</div>
+
+					</div>
+					</div>
+						<div class="flex items-center justify-between border-b-2 border-solid border-slate-400 p-5">
+							<p class="font-bold">Contact Us</p>
+						</div>
+				</div>
+
+				<div class="flex hidden lg:flex items-end flex-col ">
+					<div class="border-l-2 w-max border-solid border-white pl-3 mb-4">
+						<p>info@tekleaders.com</p>
+					</div>
+
+					<div class="w-full h-[80px]">
+						<nav>
+							<ul class="font-bold inline-flex gap-3 p-4 relative">
+								<li
+									class="transition-all duration-300 linear p-3 w-max h-max cursor-pointer rounded-2xl rounded-br-none border-2 border-solid border-sky-600"
+								>
+									Home
+								</li>
+								<li
+									class="transition-all duration-500 linear p-3 cursor-pointer rounded-2xl rounded-br-none hover:border-2 border-solid border-sky-600"
+								>
+									About Us <i class="fa fa-chevron-down"></i>
+									<ul class="bg-sky-600 hidden mt-6 absolute">
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											About Us
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Awards
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											News
+										</li>
+									</ul>
+								</li>
+								<li
+									class="transition-all duration-300 linear p-3 cursor-pointer rounded-2xl rounded-br-none hover:border-2 border-solid border-sky-600"
+								>
+									Solutions <i class="fa fa-chevron-down"></i>
+									<ul class="bg-sky-600 hidden mt-6 absolute">
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Data Management
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Application Development
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Development
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Business Strategy
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											IT consulting
+										</li>
+									</ul>
+								</li>
+								<li
+									class="transition-all duration-300 linear p-3 cursor-pointer rounded-2xl rounded-br-none hover:border-2 border-solid border-sky-600"
+								>
+									Resources <i class="fa fa-chevron-down"></i>
+									<ul class="bg-sky-600 hidden mt-6 absolute">
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Blogs
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Case Study
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Viz Gallery
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Training
+										</li>
+									</ul>
+								</li>
+								<li
+									class="transition-all duration-300 linear p-3 cursor-pointer rounded-2xl rounded-br-none hover:border-2 border-solid border-sky-600"
+								>
+									Careers <i class="fa fa-chevron-down"></i>
+									<ul class="bg-sky-600 hidden mt-6 absolute">
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											Careers
+										</li>
+										<li
+											class="hover:bg-sky-700 p-4 border-b-2 border-solid border-slate-600"
+										>
+											LCA
+										</li>
+									</ul>
+								</li>
+								<li
+									class="transition-all duration-300 linear p-3 cursor-pointer rounded-2xl rounded-br-none hover:border-2 border-solid border-sky-600"
+								>
+									Contact Us
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="mx-auto md:mr-10 bg-white w-11/12 md:w-2/5 lg:w-[30%] rounded-2xl rounded-br-none py-12 px-8"
+			>
+				<p class="font-bold text-4xl mb-3 text-[#003368]">
+					Extracting Intelligent Data.
+				</p>
+				<p class="text-slate-700 mb-3 text-xl">
+					Your business growth is directly proportional to the value created
+					from your data.
+				</p>
+
+				<div class="flex gap-2 text-lg mt-8 font-bold">
+					<div class="w-full">
+						<button
+							class="rounded-md w-full py-2 transition-color linear duration-500 hover:bg-[#1c3867] hover:text-white uppercase tracking-wider"
+						>
+							Solutions
+						</button>
+					</div>
+					<div class="w-full">
+						<button
+							class="rounded-md w-full py-2 uppercase hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 text-white tracking-wider bg-gradient-to-r from-red-500 to-orange-500"
+						>
+							Contact Us
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="my-20">
+			<p class="text-center text-orange-600 text-lg font-bold">Our Solutions</p>
+			<p
+				class="text-3xl lg:text-5xl lg:w-3/5 font-bold text-[#003368] w-full mx-auto text-center"
+			>
+				Empowering Businesses With Digital Intelligence & Expertise
+			</p>
+		</div>
+		<div
+			class="my-20 lg:w-11/12 mx-auto grid grid-rows-6 gap-10 grid-flow-col md:grid-rows-3 lg:grid-rows-2"
+		>
+			<div
+				class="shadow-xl shadow-slate-500/50 rounded-br-none w-11/12 mx-auto hover:scale-110 transition-all duration-500 linear select-none bg-gradient-to-l hover:from-orange-600 from-orange-500 hover:to-red-400 to-red-500 w-11/12 mx-auto p-5 rounded-xl"
+			>
+				<p class="text-white text-3xl mt-4 font-bold text-center">
+					Business Strategy
+				</p>
+				<p class="text-white text-lg text-center py-4">
+					Whether you are just starting or ready to reassess your BI strategy,
+					Tek Leader's experienced consultants will provide expertise in
+					assessing the current BI state and guide you in the right direction
+				</p>
+			</div>
+
+			<div
+				class="shadow-xl shadow-slate-500/50 rounded-br-none w-11/12 mx-auto hover:scale-110 transition-all duration-500 linear select-none bg-gradient-to-l hover:from-orange-600 from-orange-500 hover:to-red-400 to-red-500 p-5 rounded-xl"
+			>
+				<p class="text-white text-3xl mt-4 font-bold text-center">
+					IT Consulting
+				</p>
+				<p class="text-white text-lg text-center py-4">
+					We work with you to transform your organization, driving bold ideas
+					and pragmatic solutions. Tekleaders knows how to deliver solution that
+					meet your organization's unique needs.So we focus on a select range.
+				</p>
+			</div>
+
+			<div
+				class="shadow-xl shadow-slate-500/50 rounded-br-none w-11/12 mx-auto hover:scale-110 transition-all duration-500 linear select-none bg-gradient-to-l hover:from-orange-600 from-orange-500 hover:to-red-400 to-red-500 p-5 rounded-xl"
+			>
+				<p class="text-white text-3xl mt-4 font-bold text-center">
+					Visualization
+				</p>
+				<p class="text-white text-lg text-center py-4">
+					Visualizing data brings you a step close in deciphering the data and
+					generate actionable insights to drive business decisions. We provide
+					you with interactive and intelligent dashboards to facilitate you in
+					understanding your data.
+				</p>
+			</div>
+
+			<div
+				class="shadow-xl shadow-slate-500/50 rounded-br-none w-11/12 mx-auto hover:scale-110 transition-all duration-500 linear select-none bg-gradient-to-l hover:from-orange-600 from-orange-500 hover:to-red-400 to-red-500 p-5 rounded-xl"
+			>
+				<p class="text-white text-3xl mt-4 font-bold text-center">Analytics</p>
+				<p class="text-white text-lg text-center py-4">
+					Our analytics enables you are looking for from the data you have by
+					using the power of self-serving analytics tool and a powerful
+					structured analytics solution.
+				</p>
+			</div>
+
+			<div
+				class="shadow-xl shadow-slate-500/50 rounded-br-none w-11/12 mx-auto hover:scale-110 transition-all duration-500 linear select-none bg-gradient-to-l hover:from-orange-600 from-orange-500 hover:to-red-400 to-red-500 p-5 rounded-xl"
+			>
+				<p class="text-white text-3xl mt-4 font-bold text-center">
+					Development
+				</p>
+				<p class="text-white text-lg text-center py-4">
+					Most customers are accustomed to interacting with business
+					organization through a web Application. That standard still can't seem
+					to affect organization serving each other.
+				</p>
+			</div>
+
+			<div
+				class="shadow-xl shadow-slate-500/50 rounded-br-none w-11/12 mx-auto hover:scale-110 transition-all duration-500 linear select-none bg-gradient-to-l hover:from-orange-600 from-orange-500 hover:to-red-400 to-red-500 p-5 rounded-xl"
+			>
+				<p class="text-white text-3xl mt-4 font-bold text-center">Data</p>
+				<p class="text-white text-lg text-center py-4">
+					Data is available in abundance. An organization using its data wisely
+					stays ahead of the game. We provide tailor made solutions to empower
+					you with the ability to harvest your data when you exactly need it.
+				</p>
+			</div>
+		</div>
+
+		<div
+			class="w-11/12 md:grid-rows-1 md:grid-cols-2 md:gap-0 mx-auto grid grid-rows-2 grid-cols-1"
+		>
+			<div>
+				<img
+					src="https://images.unsplash.com/photo-1518611507436-f9221403cca2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+				/>
+			</div>
+			<div class="p-6 bg-slate-100 flex items-center">
+				<div class="w-9/12 mx-auto">
+					<p class="text-orange-600 text-lg font-bold mb-3">
+						Customer-Centric & Innovative
+					</p>
+					<p class="text-4xl lg:text-5xl font-bold text-[#003368] mb-3">
+						Digital Transformation Simplified
+					</p>
+					<p class="text-slate-600">
+						We build the foundation for effective business solutions by working
+						with complex technologies in rapidly evolving business environments,
+						offering project performance optimization.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div
+			class="p-5 mb-10 pb-10 bg-no-repeat bg-fixed bg-[url('https://tekleaders.com/wp-content/uploads/2021/06/ourstorybg.png')]"
+		>
+			<p class="text-5xl my-10 text-center text-white font-bold">
+				Great Culture and amazing people
+			</p>
+			<div class="swiper mySwiper w-11/12 mx-auto">
+				<div class="swiper-wrapper mx-auto">
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward14.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-10"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward13.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward12.png"
+						/>
+					</div>
+					
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward10.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward9.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward8.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward7.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward6.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward5.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward4.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward3.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward2.png"
+						/>
+					</div>
+					<div class="swiper-slide">
+						<img
+							class="swiper-slide h-20"
+							src="https://tekleaders.com/wp-content/uploads/2021/06/gaward1.png"
+						/>
+					</div>
+
+				</div>
+				<div class="swiper-pagination mb-4 relative top-[10px]"></div>
+			</div>
+		</div>
+
+		<div class="">
+			<p class="text-5xl text-center font-bold text-[#003368] mb-3">
+				Case Studies
+			</p>
+</div><div class="md:w-10/12 mx-auto grid mt-5 grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2 gap-10">
+			<div
+				class="w-11/12  mx-auto rounded-xl overflow-hidden rounded-br-none shadow-xl shadow-slate-500/50"
+			>
+				<div class="relative">
+					<img
+						class="rounded-xl hover:scale-110 transition-all duration-500 ease-in-out"
+						src="https://tekleaders.com/wp-content/uploads/2021/07/fraud-detection-and-prevention-leveraging-data-by-tek-leadersNEW.jpg"
+					/>
+					<svg
+						class="absolute bottom-0"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1440 320"
+					>
+						<path
+							fill="#ffffff"
+							fill-opacity="1"
+							d="M0,320L48,288C96,256,192,192,288,144C384,96,480,64,576,74.7C672,85,768,139,864,138.7C960,139,1056,85,1152,64C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+						></path>
+					</svg>
+				</div>
+				<div class="relative bg-white px-10 py-5 flex flex-col items-center">
+					<p class="text-[#003368] text-3xl font-bold text-center">
+						Fraud Detection And Prevention Leveraging Data
+					</p>
+					<button
+						class="mt-3 rounded-md w-8/12 font-bold py-2 uppercase hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 text-white tracking-wider bg-gradient-to-r from-red-500 to-orange-500"
+					>
+						explore now
+					</button>
+				</div>
+			</div>
+			<div
+				class="w-11/12 mx-auto rounded-xl overflow-hidden rounded-br-none shadow-xl shadow-slate-500/50"
+			>
+				<div class="relative">
+					<img
+						class="rounded-xl hover:scale-110 transition-all duration-500 ease-in-out"
+						src="https://tekleaders.com/wp-content/uploads/2021/07/sap-bo-migration-and-sunset-by-tek-leadersNEW.jpg"
+					/>
+					<svg
+						class="absolute bottom-0"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1440 320"
+					>
+						<path
+							fill="#ffffff"
+							fill-opacity="1"
+							d="M0,320L48,288C96,256,192,192,288,144C384,96,480,64,576,74.7C672,85,768,139,864,138.7C960,139,1056,85,1152,64C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+						></path>
+					</svg>
+				</div>
+				<div class="relative bg-white px-10 py-5 flex flex-col items-center">
+					<p class="text-[#003368] text-3xl font-bold text-center">
+						SAP BO Migration And Sunset
+					</p>
+					<button
+						class="mt-10 rounded-md w-8/12 font-bold py-2 uppercase hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 text-white tracking-wider bg-gradient-to-r from-red-500 to-orange-500"
+					>
+						explore now
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="bg-slate-100  grid grid-rows-2 grid-cols-3 md:grid-rows-1 md:grid-cols-4 gap-5 p-10  lg:p-20 mt-24 ">
+
+			<div class="flex flex-col gap-10 col-span-2 p-4">
+			<div><img src="https://tekleaders.com/wp-content/uploads/2021/06/logo.png" /></div>
+			<div class="text-slate-500 text-justify">
+				<p>
+					Tek Leaders is a fast growing, global, innovative IT Services firm specializing in Data Analytics, Business Intelligence, Digital Transformation solutions to our clients. Founded on the premise of providing an unprecedented level of service and quality, we provide custom solutions for our clients designed around their specific needs.
+				</p>
+				<p class="mt-3">info@tekleaders.com</p>
+				<p>9300 John Hickman Parkway, Suite: 801
+					Frisco, TX 75035</p>
+			</div>
+			<div>
+				<i class="fa fa-brands fa-linkedin-in"></i>
+			</div>
+		</div>
+
+		<div class="foot flex items-center justify-between">
+			<ul class="flex flex-col gap-5 absolute">
+				<li class="capitalize text-orange-500 transition-colors duration-500 linear cursor-pointer">Home</li>
+				<li class="capitalize text-[#003368] transition-colors duration-500 linear cursor-pointer hover:text-orange-500 ">About Us <i class="fa fa-solid fa-angle-right"></i>
+					<ul class="bg-white hidden absolute w-44 md:left-32 right-28 text-[#003368] ">
+					<li
+						class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+					>
+						About Us
+					</li>
+					<li
+						class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+					>
+						Awards
+					</li>
+					<li
+						class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+					>
+						News
+					</li>
+				</ul> </li>
+				<li class="capitalize text-[#003368] transition-colors duration-500 linear cursor-pointer hover:text-orange-500 ">solutions <i class="fa fa-solid fa-angle-right"></i>
+					<ul class="bg-white hidden absolute md:left-32 right-28 w-44 text-[#003368] ">
+						<li
+							class="hover:bg-slate-200 p-4  border-b-2 border-solid border-slate-400"
+						>
+							Data Management
+						</li>
+						<li
+							class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+						>
+							Awards
+						</li>
+						<li
+							class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+						>
+							News
+						</li>
+					</ul>  </li>
+				<li class="capitalize text-[#003368] transition-colors duration-500 linear cursor-pointer hover:text-orange-500 ">resources <i class="fa fa-solid fa-angle-right"></i> 
+					<ul class="bg-white hidden absolute md:left-32 right-28 w-44 text-[#003368] ">
+						<li
+							class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+						>
+							About Us
+						</li>
+						<li
+							class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+						>
+							Awards
+						</li>
+						<li
+							class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+						>
+							News
+						</li>
+					</ul> </li>
+				<li class="capitalize text-[#003368] transition-colors duration-500 linear cursor-pointer hover:text-orange-500 ">careers <i class="fa fa-solid fa-angle-right"></i> 
+					<ul class="bg-white hidden absolute md:left-32 right-28 w-44 text-[#003368] ">
+						<li
+							class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+						>
+							About Us
+						</li>
+						<li
+							class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+						>
+							Awards
+						</li>
+						<li
+							class="hover:bg-slate-200 p-4 border-b-2 border-solid border-slate-400"
+						>
+							News
+						</li>
+					</ul> </li>
+				<li class="capitalize text-[#003368] transition-colors duration-500 linear cursor-pointer hover:text-orange-500 ">contact us</li>
+			</ul>
+		</div>
+
+<div class="flex flex-col gap-10 col-span-2 md:col-span-1">
+		<div>
+			<p class="text-2xl text-[#003368] ">Subscribe To Our Newsletter</p>
+		</div>
+
+		<div>
+			<p class="text-slate-500 text-justify">Sign up to our monthly business coaching newsletter for useful articles, tips and tricks for boosting your business success:</p>
+		</div>
+		<div>
+			<input class="border-2 border-solid border-slate-400 p-2 " type="text" placeholder="Email Address:">
+		</div>
+		<div>
+			<button class=" rounded-md w-8/12 font-bold py-2 uppercase hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 text-white tracking-wider bg-gradient-to-r from-red-500 to-orange-500">Submit</button>
+		</div>
+	</div>
+	
+		</div>
+<div class="w-10/12 mx-auto border-t-4 text-center border-slate-300 border-solid p-7 text-[#003368]">© Copyright 2012 - 2022 | Tek Leaders | All Rights Reserved | Developed by Cloudmellow</div>
+		
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
