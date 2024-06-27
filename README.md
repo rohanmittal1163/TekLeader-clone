@@ -7,6 +7,11 @@ The project is clone to a single page of https://tekleaders.com/
 
 # ⚜ DEMO -- https://tekleader1163.netlify.app/
 
+
+https://github.com/rohanmittal1163/TekLeader-clone/assets/97821844/2e0a45b4-6c0c-452d-bb2b-0d408f59cfb0
+
+
+
 ![image](https://user-images.githubusercontent.com/97821844/213433056-96a0b162-0a23-4aee-bec1-03c74c08417a.png)
 ![image](https://user-images.githubusercontent.com/97821844/213432504-9d66d733-9a42-42c3-bba1-eb456606ef30.png)
 ![image](https://user-images.githubusercontent.com/97821844/213432558-32313057-c7d4-4cb9-9035-6e96b92453cc.png)
